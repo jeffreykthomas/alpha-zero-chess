@@ -118,6 +118,7 @@ def playMatches(player1, player2, EPISODES, logger, turns_until_tau0, memory=Non
                     for move in memory.stmemory:
                         if move['playerTurn'] == state.playerTurn:
                             move['value'] = value
+                            print(move)
                         else:
                             move['value'] = -value
 

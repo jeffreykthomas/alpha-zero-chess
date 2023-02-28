@@ -1061,7 +1061,7 @@ class GameState():
         self.R2_move_count_copy = self.board.R2_move_count
         self.K_move_count_copy = self.board.K_move_count
         no_progress = self.no_progress_count
-        if self.states == []:
+        if not bool(len(self.states)):
             self.states = [self.board.current_board]
         states_copy = self.states
         newBoard = Board(np.copy(self.board.current_board))
